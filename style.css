@@ -1,0 +1,264 @@
+/* ============================================
+   Akash Malhotra - Personal Academic Website
+   ============================================ */
+
+:root {
+  --prune: #630C3C;
+  --prune-light: #8a1454;
+  --bg: #fafafa;
+  --bg-card: #ffffff;
+  --text: #2d2d2d;
+  --text-muted: #666;
+  --border: #e8e8e8;
+  --accent-bg: #f5f0f2;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-hover: 0 4px 12px rgba(99,12,60,0.1);
+  --transition: 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+/* ---- Layout ---- */
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Header / Hero ---- */
+
+header {
+  padding: 80px 0 48px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--prune);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+header .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+header .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header .links a {
+  color: var(--prune);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: all var(--transition);
+}
+
+header .links a:hover {
+  background: var(--prune);
+  color: #fff;
+  border-color: var(--prune);
+}
+
+/* ---- Sections ---- */
+
+section {
+  padding: 40px 0;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--prune);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--prune);
+  display: inline-block;
+}
+
+section p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* ---- About ---- */
+
+.about p {
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+/* ---- Publication / Entry cards ---- */
+
+.pub-list {
+  list-style: none;
+}
+
+.pub-list li {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: box-shadow var(--transition);
+}
+
+.pub-list li:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.pub-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.pub-note {
+  font-size: 0.82rem;
+  color: var(--prune);
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.pub-links {
+  margin-top: 6px;
+}
+
+.pub-links a {
+  font-size: 0.82rem;
+  color: var(--prune);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.pub-links a:hover {
+  color: var(--prune-light);
+  text-decoration: underline;
+}
+
+/* ---- Timeline entries ---- */
+
+.timeline {
+  list-style: none;
+}
+
+.timeline li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline li:last-child {
+  border-bottom: none;
+}
+
+.timeline .period {
+  font-size: 0.85rem;
+  color: var(--prune);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.timeline .role {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.timeline .place {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.timeline .details {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ---- IP list ---- */
+
+.ip-list {
+  list-style: none;
+}
+
+.ip-list li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.ip-list li:last-child {
+  border-bottom: none;
+}
+
+.ip-type {
+  font-weight: 600;
+  color: var(--prune);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 600px) {
+  header {
+    padding: 48px 0 32px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  section {
+    padding: 28px 0;
+  }
+
+  .pub-list li {
+    padding: 12px 14px;
+  }
+}
