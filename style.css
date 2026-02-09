@@ -151,6 +151,16 @@ section p {
 .pub-title {
   font-weight: 600;
   color: var(--text);
+  display: block;
+}
+
+a.pub-title {
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a.pub-title:hover {
+  color: var(--prune);
 }
 
 .pub-venue {
